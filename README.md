@@ -10,11 +10,11 @@ Pode usar qualquer boilerplate/abordagem que preferir, mas tente mantê-lo simpl
 
 ### A app deve ser uma pesquisa de filmes com duas páginas:
 
-- **Home page:** com um campo de pesquisa e uma lista com os resultados;
+- **Home resultsPage:** com um campo de pesquisa e uma lista com os resultados;
 
 _Pense num estado vazio, estado de carregamento e o estado de nenhum resultado encontrado_
 
-- **Movie page:** página de detalhes do filme;
+- **Movie resultsPage:** página de detalhes do filme;
 
 _Pense num estado de carregamento e o estado de nenhum resultado encontrado_
 
