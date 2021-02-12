@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:e2e": "vue-cli-service test:e2e --headless --url http://localhost:8080 --spec tests/e2e/specs/list.spec.js",
+    "test:e2e": "vue-cli-service test:e2e --headless --url http://localhost:8080",
     "serve:build": "npm run build && serve dist"
   },
   "dependencies": {

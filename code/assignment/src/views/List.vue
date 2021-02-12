@@ -1,5 +1,5 @@
 <template>
-  <v-container class="list fill-height">
+  <v-container class="list fill-height" data-cy="list-page">
     <v-row align="center" justify="center" v-if="!GET_TOTAL_RESULTS">
       <v-col cols="auto">
         <p class="text-center">No info available</p>
