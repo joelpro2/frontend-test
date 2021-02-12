@@ -66,6 +66,7 @@
 
 <script>
 import { mapActions } from 'vuex'
+import Cookies from '@/services/Cookie'
 
 export default {
   name: 'Movie',
@@ -73,6 +74,7 @@ export default {
     id: { required: true }
   },
   created () {
+    this.favourite = Cookies.getCookie(this.id) || false
     this.CLEAR_RESULTS()
     this.FETCH_MOVIES({ i: this.id, plot: 'full' }).then(result => {
       this.movie = result[0]
@@ -80,15 +82,24 @@ export default {
   },
   data: () => ({
     movie: null,
-    favourite: false
+    favourite: null
   }),
   computed: {
+
   },
   methods: {
     ...mapActions([
       'FETCH_MOVIES',
       'CLEAR_RESULTS'
     ])
+  },
+  watch: {
+    // favourites should be stored in a database
+    favourite (val) {
+      if (this.id) {
+        Cookies.setCookie(this.id, val, 30)
+      }
+    }
   }
 }
 </script>

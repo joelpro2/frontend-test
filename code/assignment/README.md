@@ -15,6 +15,11 @@ npm run serve
 npm run build
 ```
 
+### To produce a simulated production environment (use this)
+```
+npm run serve:build
+```
+
 ### Lints and fixes files
 ```
 npm run lint
